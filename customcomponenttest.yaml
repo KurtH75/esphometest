@@ -1,0 +1,45 @@
+esphome:
+  name: "customcomponenttest"
+
+
+esp32:
+  board: esp32dev
+
+external_components:
+  - source:
+      type: local
+      path: custom_components
+    
+
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+
+wifi:
+  
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Esphome-Web-65F744"
+    password: "o9ZqynjYM7bv"
+
+captive_portal:
+
+  # example configuration:
+
+light:
+  - platform: empty_light
+    name: namekurttest
+    output: kurt
+
+output:
+  - id: kurt
+    platform: ledc
+    pin: 9
+    
